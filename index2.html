@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dark Studio - A creative-tech hub by Samarth blending mythology, Minecraft, AI, and design.">
+  <meta name="keywords" content="Dark Studio, Minecraft series, AI tools, web development, digital storytelling, Samarth, Kaalchakra">
+  <title>Sam | Dark Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    .navbar {
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #00ffcc;
+      padding: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+      margin: 10px;
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #00ffcc;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #00ffcc;
+    }
+
+    .project-card, .membership-card, .segment-card, .service-card, .portfolio-card, .blog-card, .testimonial-card, .vision-card, .design-card, .contact-card {
+      background: #1a1a1a;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 251, 204, 0.1);
+    }
+
+    .segment-card {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background-color: #262626;
+      color: #f2f2f2;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .segment-card:hover {
+      background-color: #00ffcc;
+      transform: translateY(-5px);
+      color: #0d0d0d;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      border-top: 2px solid #333;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .nav-links.show {
+        max-height: 500px;
+      }
+
+      .nav-links a {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .segment-card {
+        display: block;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 769px) {
+      .nav-links {
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+      }
+
+      .project-card, .membership-card, .service-card, .portfolio-card, .blog-card, .testimonial-card, .vision-card, .design-card {
+        display: inline-block;
+        width: 48%;
+        margin: 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dark Studio</h1>
+    <nav class="navbar">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#membership">Membership</a>
+        <a href="#segments">Segments</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#community">Community</a>
+        <a href="#vision">Vision</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m Samarth — creator of Minecraft sagas, co-founder of Dark Studio. I mix ancient vibes with digital magic to tell epic stories online. I also build web apps, design creative UIs, and experiment with AI. Whether it's storytelling, AI tools, or full-stack dev — I'm all in!</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Kaalchakra: Chronicles of the Divine Battle</h3>
+        <p>A Minecraft-based mythology series blending Hindu lore with a futuristic apocalypse. Time travel, prophecy, and action — all packed in.</p>
+        <a href="https://youtu.be/CuQbeek9kNM?si=Tjgb9yrqH07aqTnY" target="_blank" style="color: #00ffcc;">Watch Now</a>
+      </div>
+      <div class="project-card">
+        <h3>Dark Studio</h3>
+        <p>Dark Studio is a creative-tech powerhouse blending AI, web design, development, and story content under one roof. We empower creators and dreamers with digital tools and support.</p>
+      </div>
+    </section>
+
+    <section id="designs">
+      <h2>Designs</h2>
+      <div class="design-card">
+        <p>You can get some designs we made here and use them freely for your website.</p>
+        <a href="design.html" style="color: #00ffcc; text-decoration: none;">Check Designs</a>
+      </div>
+    </section>
+
+    <section id="membership">
+      <h2>Membership</h2>
+      <div class="membership-card">
+        <p>Join the Dark Studio community by purchasing membership from the section which interests you.</p>
+      </div>
+      <div class="membership-card">
+        <p>Enjoy exclusive perks, early access, and collaboration invites.</p>
+      </div>
+    </section>
+
+    <section id="segments">
+      <h2>Segments of Dark Studio</h2>
+      <a href="https://dark-studios-creative.netlify.app/" class="segment-card">Creative Content Creation</a>
+      <a href="https://dark-studios-web.netlify.app/" class="segment-card">Web Development</a>
+      <a href="https://dark-studios-branding.netlify.app/" class="segment-card">Branding</a>
+      <a href="https://dark-studios-guidance.netlify.app/" class="segment-card">Guidance</a>
+      <a href="https://dark-studios-courses.netlify.app/" class="segment-card">Courses</a>
+      <a href="https://dark-studios-gaming.netlify.app/" class="segment-card">Gaming</a>
+      <a href="https://dark-studios-startup.netlify.app/" class="segment-card">Startup Solutions</a>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="service-card">
+        <p>Custom websites, UI/UX design, prompt engineering, AI integration, and content creation. Let’s build your vision.</p>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-card">
+        <p>Showcasing client projects, AI tools, and designs. [Coming Soon]</p>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-card">
+        <p>Explore dev logs, AI experiments, and storytelling breakdowns. [Coming Soon]</p>
+      </div>
+    </section>
+
+    <section id="community">
+      <h2>Community</h2>
+      <div class="testimonial-card">
+        <p>Join our Discord to collaborate with creators worldwide. [Discord link coming soon]</p>
+      </div>
+    </section>
+
+    <section id="vision">
+      <h2>Vision</h2>
+      <div class="vision-card">
+        <p>We aim to shape a digital renaissance where myth meets machine — led by Gen Z creators.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <p><a href="mailto:darkstudio084@gmail.com" style="color: #00ffcc;">darkstudio084@gmail.com</a></p>
+        <p><a href="https://youtube.com/@darkstudio84" target="_blank" style="color: #00ffcc;">YouTube Channel</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sam from Dark Studio | All rights reserved | V 1.0.1</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
