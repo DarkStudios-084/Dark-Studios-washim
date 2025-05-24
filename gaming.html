@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaming and Interactive Entertainment</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      color: #00ffcc;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .creation-card {
+      background: #1a1a1a;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10000px rgba(0, 251, 204, .1);
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background: #00ffcc;
+      color: #0d0d0d;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    a.back-btn:hover {
+      background: #00ccaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      border-top: 2px solid #333;
+      margin-top: 40px;
+    }
+
+    button:hover,
+    .reset-btn:hover,
+    .signup-btn:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+    }
+
+    .work-in-progress {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.5em;
+      color: #ff6347;
+      background: rgba(255, 99, 71, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .back-btn {
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>⚠️ <strong>Sorry, Work in Progress</strong> ⚠️</h1>
+  </header>
+
+  <section>
+    <div class="work-in-progress">
+      <p>We are currently working on this page. Please check back later!</p>
+    </div>
+    <a href="index2.html" class="back-btn">← Back to Home</a>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page</title>
+  <style>
+    /* Ensure the body fills the entire height of the viewport */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Main content area that can grow and push the footer to the bottom */
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Footer style to stay at the bottom */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      border-top: 2px solid #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Back button style */
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Back button hover effect */
+    button:hover {
+      background-color: #00b399;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <footer>
+    <p>&copy; 2025 Sam from Dark Studio | All rights reserved | V 1.0.0</p>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+</body>
+</html>
