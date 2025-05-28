@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Studios – Designs</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    .designs-section {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      padding: 10px;
+    }
+
+    .design-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s, background-color 0.3s;
+      cursor: pointer;
+      padding: 15px;
+    }
+
+    .design-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .design-card {
+        height: 160px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .design-card {
+        height: 140px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dark Studios – Designs</h1>
+
+  <section class="designs-section">
+    <div class="design-card">
+      <a href="UI-kit.html" style="text-decoration: none; color: white;">
+       UI Kit – Minimal App
+       </a></div>
+    <div class="design-card">
+      <a href="website.html" style="text-decoration: none; color: white;">
+    Website Template – Portfolio</a></div>
+    <div class="design-card">Poster – Neon Style</div>
+    <div class="design-card">Branding Pack – Startup</div>
+    <div class="design-card">3D Mockup – Tech Product</div>
+    <div class="design-card">Social Media Kit</div>
+  </section>
+
+</body>
+</html>
