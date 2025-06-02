@@ -2,71 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing Plans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Plans</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
       background-color: #0d0d0d;
       color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
       padding: 40px 20px;
     }
 
     h1 {
-      color: #00ffcc;
       text-align: center;
-      font-size: 48px;
-      margin-bottom: 50px;
+      color: #00ffcc;
+      font-size: 42px;
+      margin-bottom: 40px;
     }
 
     .plans-container {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
-      max-width: 900px;
-      margin: auto;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
     }
 
-    .plan {
+    .plan-box {
       background-color: #1a1a1a;
       border: 2px solid #00ffcc;
       border-radius: 20px;
-      padding: 30px;
+      padding: 25px;
+      width: 300px;
       transition: transform 0.3s ease;
     }
 
-    .plan:hover {
-      transform: scale(1.02);
+    .plan-box:hover {
+      transform: scale(1.03);
     }
 
-    .plan h2 {
+    .plan-box h2 {
       color: #00ffcc;
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    .features {
+    .plan-box p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .price {
+      margin-top: 20px;
       font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 20px;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #999;
+      margin-right: 8px;
+    }
+
+    .discounted-price {
+      color: #00ffcc;
+      font-weight: bold;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 25px;
+      margin-top: 20px;
+      padding: 12px 20px;
       background-color: #00ffcc;
       color: #0d0d0d;
       font-weight: bold;
-      border: none;
-      border-radius: 30px;
       text-decoration: none;
-      font-size: 16px;
+      border-radius: 10px;
       transition: background 0.3s ease;
     }
 
@@ -77,98 +85,121 @@
 </head>
 <body>
 
-  <h1>Choose Your Plan</h1>
+  <h1>Choose Your Power Pack</h1>
 
   <div class="plans-container">
 
-    <div class="plan">
-      <h2>1. Basic Spark</h2>
-      <div class="features">
-        • 1-page static website<br>
-        • Mobile responsive<br>
-        • WhatsApp/contact form<br>
-        • Social media links<br>
-        • Delivery: 5–7 days
+    <!-- Plan 1 -->
+    <div class="plan-box">
+      <h2>Basic Spark</h2>
+      <p>
+        • 1-page static design<br>
+        • Mobile optimized<br>
+        • Contact form or WhatsApp<br>
+        • Social media links
+      </p>
+      <div class="price">
+        <span class="original-price">₹3,999</span>
+        <span class="discounted-price">₹3,499</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>2. Starter Blaze</h2>
-      <div class="features">
-        • Includes Basic Plan +<br>
+    <!-- Plan 2 -->
+    <div class="plan-box">
+      <h2>Starter Blaze</h2>
+      <p>
         • 3-page static site<br>
         • Custom layout<br>
         • Google Maps integration<br>
-        • Basic CSS animations<br>
-        • Delivery: 5–9 days
+        • Smooth animations
+      </p>
+      <div class="price">
+        <span class="original-price">₹7,999</span>
+        <span class="discounted-price">₹6,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>3. Pro Pulse</h2>
-      <div class="features">
-        • Starter Plan +<br>
-        • 5-page site<br>
-        • Advanced layout & animations<br>
-        • Testimonials & gallery<br>
-        • Email form + Analytics<br>
-        • Delivery: 7–10 days
+    <!-- Plan 3 -->
+    <div class="plan-box">
+      <h2>Pro Pulse</h2>
+      <p>
+        • 5 custom pages<br>
+        • Brand color setup<br>
+        • Animations, gallery, social embeds<br>
+        • Contact + feedback forms
+      </p>
+      <div class="price">
+        <span class="original-price">₹10,999</span>
+        <span class="discounted-price">₹9,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>4. Business Boom</h2>
-      <div class="features">
-        • Pro Plan +<br>
-        • Full branding setup<br>
-        • SEO basics<br>
-        • Blog setup<br>
-        • Admin dashboard (static)<br>
-        • Delivery: 10–14 days
+    <!-- Plan 4 -->
+    <div class="plan-box">
+      <h2>Business Boom</h2>
+      <p>
+        • 6–8 pages<br>
+        • Business-ready design<br>
+        • Advanced forms & integrations<br>
+        • SEO + fast load
+      </p>
+      <div class="price">
+        <span class="original-price">₹17,499</span>
+        <span class="discounted-price">₹14,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>5. Dark Pro+</h2>
-      <div class="features">
-        • Business Boom +<br>
-        • UI animations pack<br>
-        • Multiple CTA pages<br>
-        • WhatsApp chatbot (basic)<br>
-        • Dark mode design system<br>
-        • Delivery: 12–16 days
+    <!-- Plan 5 -->
+    <div class="plan-box">
+      <h2>Dark Pro+</h2>
+      <p>
+        • Premium dark theme UI<br>
+        • 10+ pages<br>
+        • Admin panel look<br>
+        • Custom JS + interactive UI
+      </p>
+      <div class="price">
+        <span class="original-price">₹25,499</span>
+        <span class="discounted-price">₹21,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>6. Legend UI Pack</h2>
-      <div class="features">
-        • Dark Pro+ +<br>
-        • UI/UX audit<br>
-        • Wireframes & prototypes<br>
-        • Microinteractions<br>
-        • Custom font & icon set<br>
-        • Delivery: 14–18 days
+    <!-- Plan 6 -->
+    <div class="plan-box">
+      <h2>Legend UI Pack</h2>
+      <p>
+        • UI portfolio pack<br>
+        • 3 themed templates<br>
+        • Includes animations + assets<br>
+        • Custom built for designers
+      </p>
+      <div class="price">
+        <span class="original-price">₹29,999</span>
+        <span class="discounted-price">₹25,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
-    <div class="plan">
-      <h2>7. God Mode</h2>
-      <div class="features">
-        • Everything in Legend UI +<br>
-        • CMS-ready system<br>
-        • AI Chatbot integration<br>
-        • SEO Pro + Performance boost<br>
-        • After-launch support<br>
-        • Delivery: 15–21 days
+    <!-- Plan 7 -->
+    <div class="plan-box">
+      <h2>God Mode</h2>
+      <p>
+        • Ultimate all-access pack<br>
+        • 15+ page site<br>
+        • Dynamic JS logic<br>
+        • Full animations, mobile & desktop UX<br>
+        • One-on-one dev support
+      </p>
+      <div class="price">
+        <span class="original-price">₹59,999</span>
+        <span class="discounted-price">₹49,999</span>
       </div>
-      <a class="btn" href="purchase.html">Purchase Plan</a>
+      <a href="purchase.html" class="btn">Purchase</a>
     </div>
 
   </div>
