@@ -1,0 +1,170 @@
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ========== Reusable Classes ========== */
+.neon {
+  color: #00ffcc;
+  text-shadow: 0 0 6px #00ffcc, 0 0 12px #00ffcc;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-outline {
+  border: 2px solid #00ffcc;
+  background: transparent;
+  transition: 0.25s;
+}
+.btn-outline:hover {
+  background: #00ffcc20;
+  transform: scale(1.05);
+}
+
+.btn-solid {
+  background: #00ffcc20;
+  border: 2px solid #00ffcc40;
+  transition: 0.25s;
+}
+.btn-solid:hover {
+  background: #00ffcc35;
+  transform: scale(1.05);
+}
+
+.btn-muted {
+  background: #181818;
+  border: 1px solid #333;
+  transition: 0.25s;
+}
+.btn-muted:hover {
+  background: #222;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background: #0b0b0b;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* ========== HEADER ========== */
+
+/* initial state */
+.header-top {
+  padding: 20px 0;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+/* after scroll */
+.header-scrolled {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #222;
+  box-shadow: 0 2px 8px rgba(0, 255, 200, 0.05);
+  transition: 0.25s ease-in-out;
+}
+
+/* nav links */
+.nav-link {
+  color: #dcdcdc;
+  transition: 0.2s;
+}
+.nav-link:hover {
+  color: #00ffcc;
+  text-shadow: 0px 0px 6px #00ffcc;
+}
+
+/* ========== HERO ========== */
+.hero-title {
+  line-height: 1.2;
+}
+
+/* Desktop: full height hero */
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile: natural height */
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* ========== Cards ========== */
+.card,
+.service-card,
+.design-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: 0.25s;
+}
+.card:hover,
+.design-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(0, 255, 200, 0.15);
+}
+
+/* Design card special */
+.design-card {
+  text-align: center;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+/* ========== Scroll Reveal Animation ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Mobile Nav Open State ========== */
+#mobileNav.show {
+  display: block;
+}
+
+/* ========== Canvas Fallback ========== */
+#heroCanvas {
+  opacity: 0.18;
+}
