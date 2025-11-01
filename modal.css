@@ -1,0 +1,47 @@
+/* modal.css — small centered modal, responsive */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,10,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+.modal-overlay.active { display: flex; }
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(0,255,204,0.04);
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.6);
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-step { display:block; }
+
+.qr-wrap { display:flex; align-items:center; justify-content:center; }
+
+/* inputs inside modal */
+.modal .input { width: 100%; }
+
+/* make small screens comfortable */
+@media (max-width:420px) {
+  .modal { padding: 16px; border-radius: 10px; }
+  .modal-close { right:8px; top:8px; }
+}
