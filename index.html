@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dark Studio</title>
-  <link rel="stylesheet" href="style.css" />
+
   <style>
+    /* ===== Global Styles ===== */
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #0d0d0d;
@@ -16,8 +17,8 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      animation: fadeIn 1s ease-in-out;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -25,14 +26,17 @@
       to { opacity: 1; }
     }
 
+    /* ===== Typewriter ===== */
     .typewriter {
-      font-size: 28px;
+      font-size: clamp(24px, 5vw, 40px);
       margin-bottom: 40px;
-      overflow: hidden;
       white-space: nowrap;
       border-right: 2px solid #00ffcc;
+      overflow: hidden;
       width: 0;
+      display: inline-block;
       animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+      text-shadow: 0 0 8px #00ffcc;
     }
 
     @keyframes typing {
@@ -43,74 +47,44 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
-.card {
-  width: 90%;
-  max-width: 300px;
-}
-.typewriter {
-  font-size: 5vw;
-  max-width: 90%;
-}
+
+    /* ===== Card Button ===== */
     .card {
       background: #1e1e1e;
       color: #00ffcc;
-      text-decoration: none;
       border: 2px solid #292929;
       padding: 2rem;
       border-radius: 16px;
-      width: 300px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+      width: clamp(250px, 80vw, 320px);
+      text-decoration: none;
+      transition: 0.25s ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
     }
 
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 2000px rgba(0, 255, 255, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
     }
 
     .card h2 {
       margin: 0 0 10px;
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .card p {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-.typewriter {
-  display: inline-block;
-}
-
-.typewriter {
-  text-shadow: 0 0 8px #00ffcc;
-}
-
-@keyframes typing {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #00ffcc; }
-}
-
-    button:hover,
-    .reset-btn:hover,
-    .signup-btn:hover {
-      transform: scale(1.05);
-      transition: transform 0.2s ease;
+      font-size: 15px;
+      line-height: 1.4;
     }
   </style>
 </head>
-<body>
 
+<body>
   <h1 class="typewriter">Welcome to Dark Studio</h1>
 
   <a href="index2.html" class="card">
     <h2>Dark Studio</h2>
-    <p><h2>Click To Enter Dark Studios<h2></p>
+    <p>Click to Enter Dark Studios</p>
   </a>
 </body>
 </html>
