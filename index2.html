@@ -3,67 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sam | Dark Studio — Tailwind</title>
+  <meta name="description" content="Dark Studio — Samarth. Myth x Minecraft x AI. Creative-tech studio.">
+  <meta property="og:title" content="Sam | Dark Studio">
+  <meta property="og:description" content="Myth x Minecraft x AI — Dark Studio by Samarth.">
+  <meta property="og:type" content="website">
+  <title>Sam | Dark Studio</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* small custom for neon */
-    .neon { color: #00ffcc; text-shadow: 0 0 18px rgba(0,255,204,0.08); }
-    .glass { background: rgba(255,255,255,0.02); backdrop-filter: blur(6px); }
-  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
-<body class="bg-[#0d0d0d] text-white antialiased">
-  <header id="twHeader" class="fixed w-full top-0 z-40 transition-all">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a class="neon font-bold text-lg" href="#">Dark Studio</a>
-      <nav class="hidden md:flex gap-4">
-        <a class="neon hover:underline" href="#about">About</a>
-        <a class="neon" href="#projects">Projects</a>
-        <a class="neon" href="#contact">Contact</a>
+
+<body class="bg-[#0d0d0d] text-slate-100 antialiased">
+
+  <!-- HEADER -->
+  <header id="siteHeader" class="fixed w-full z-[100] transition-all duration-300 header-top">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="brand neon text-xl font-extrabold tracking-wide">Dark Studio</a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 text-sm font-semibold" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#designs" class="nav-link">Designs</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <button id="twBurger" class="md:hidden neon">☰</button>
+
+      <!-- Mobile Toggle -->
+      <button id="menuBtn" aria-expanded="false" aria-label="Menu" class="md:hidden text-3xl neon">☰</button>
     </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="hidden md:hidden bg-[#0b0b0b]/90 backdrop-blur-lg border-t border-slate-800">
+      <div class="px-6 py-4 flex flex-col gap-3 text-sm font-semibold">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#designs" class="nav-link">Designs</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
   </header>
 
+  <!-- HERO -->
   <main class="pt-24">
-    <section id="about" class="text-center py-24">
-      <h1 class="neon text-4xl md:text-6xl font-extrabold">Samarth — Dark Studio</h1>
-      <p class="mt-4 text-slate-200">Myth • Minecraft • AI • Design</p>
-      <a href="#projects" class="inline-block mt-6 px-5 py-3 rounded-full border border-[#00ffcc] neon">See Projects</a>
+    <section id="about" class="relative overflow-hidden hero-section">
+      <div class="max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
+        <h1 class="hero-title neon text-4xl md:text-6xl font-extrabold mb-4"> Dark Studio</h1>
+        <p class="sub text-slate-300 max-w-2xl mb-8">•Web •Design •Devlopment •AI
+        •Social Media•</p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#projects" class="btn-outline neon px-6 py-3 rounded-full font-semibold">Explore Projects</a>
+          <a href="#contact" class="btn-solid px-6 py-3 rounded-full neon">Contact</a>
+        </div>
+      </div>
+
+      <canvas id="heroCanvas" class="absolute inset-0 pointer-events-none"></canvas>
     </section>
 
-    <section id="projects" class="max-w-6xl mx-auto px-6 pb-20">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title neon">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <article class="glass p-6 rounded-xl border border-[#083933]">
+        <article class="card reveal">
           <h3 class="neon text-xl font-semibold">Kaalchakra</h3>
-          <p class="mt-2 text-slate-200">Minecraft saga — time travel & prophecy.</p>
+          <p class="mt-2 text-slate-300">Minecraft mythology series — prophecy, time-travel, and apocalypse.</p>
+          <a href="https://youtu.be/CuQbeek9kNM?si=Tjgb9yrqH07aqTnY" target="_blank" class="neon mt-3 inline-block text-sm font-semibold">Watch</a>
         </article>
-        <article class="glass p-6 rounded-xl border border-[#083933]">
+
+        <article class="card reveal">
           <h3 class="neon text-xl font-semibold">Dark Studio</h3>
-          <p class="mt-2 text-slate-200">Design & AI tooling studio.</p>
+          <p class="mt-2 text-slate-300">Studio for AI tooling, web dev, storytelling, and visuals.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- DESIGNS -->
+    <section id="designs" class="section">
+      <h2 class="section-title neon">Designs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="design.html" class="design-card reveal">Free Website Designs</a>
+        <a href="branding.html" class="design-card reveal">Brand Kits</a>
+        <a href="assets/logo.svg" class="design-card reveal" download>Download Logo</a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <h2 class="section-title neon">Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="service-card reveal">
+          <h4 class="neon font-semibold">Web + UI/UX</h4>
+          <p class="mt-1 text-slate-300">Custom sites, landing pages, and UI systems.</p>
+        </div>
+        <div class="service-card reveal">
+          <h4 class="neon font-semibold">AI Integration</h4>
+          <p class="mt-1 text-slate-300">Prompt engineering, tools, and automation workflows.</p>
+        </div>
+        <div class="service-card reveal">
+          <h4 class="neon font-semibold">Social Media Mgt</h4>
+          <p class="mt-1 text-slate-300">Management & marketing for growing brands.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section-title neon">Contact</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card reveal">
+          <p>Email: <a class="neon" href="mailto:darkstudio084@gmail.com">darkstudio084@gmail.com</a></p>
+          <p class="mt-2"><a class="neon" href="https://youtube.com/@darkstudio84" target="_blank">YouTube Channel</a></p>
+        </div>
+
+        <form class="card reveal" onsubmit="return false">
+          <label class="block text-sm text-slate-300">Message</label>
+          <textarea class="input mt-2" rows="4" placeholder="Say hi — demo only"></textarea>
+          <div class="mt-4 flex gap-2">
+            <button class="btn-solid px-4 py-2 rounded-md neon">Send</button>
+            <button type="reset" class="btn-muted px-4 py-2 rounded-md">Reset</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="text-center py-8 border-t border-slate-800">
-    <small class="text-slate-400">&copy; 2025 Dark Studio</small>
+  <footer class="border-t border-slate-800 mt-12 py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center text-slate-400 text-sm">
+      &copy; 2025 Dark Studios Washim • V1.2
+    </div>
   </footer>
 
-  <script>
-    // small Tailwind interactivity: header background on scroll & burger
-    (function(){
-      const header = document.getElementById('twHeader');
-      const burger = document.getElementById('twBurger');
-      window.addEventListener('scroll', ()=> {
-        header.classList.toggle('backdrop-blur-sm', window.scrollY > 60);
-        header.style.background = window.scrollY > 60 ? 'rgba(6,6,6,0.72)' : 'transparent';
-      });
-      // expand mobile nav (simple)
-      burger?.addEventListener('click', ()=> {
-        // fallback: show alert or you can implement mobile menu
-        alert('Mobile menu: implement as needed (Tailwind mobile menu).');
-      });
-    })();
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
